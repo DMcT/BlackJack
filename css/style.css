@@ -1,0 +1,422 @@
+html {
+    background-color: #e8e7e2;
+    box-sizing: border-box;
+    height: 100%;
+    border: 15px solid #4c4d46;
+    min-width: 320px;
+}
+#rules,
+#close_rules {
+    color: #4c4d46;
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    float: right;
+}
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    transform: rotate(-20deg);
+    position: absolute;
+    color: #4c4d46;
+}
+h2 {
+    font-family: Times, sans-serif;
+    font-size: 2rem;
+}
+#start {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #4c4d46;
+    padding: 1rem;
+    font-size: 3rem;
+    font-family: 'Great Vibes', cursive;
+}
+.rules {
+    display: none;
+    border: 8px solid #4c4d46;
+    color: #4c4d46;
+    position: absolute;
+    background-color: #e8e7e2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.25rem;
+    padding: 1rem;
+    width: 85%;
+    height: 80%;
+    overflow: scroll;
+    z-index: 999;
+}
+#playerselect {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #4c4d46;
+    padding: 1rem;
+    font-size: 1.8rem;
+    width: 75%;
+    text-align: center;
+    min-width: 320px;
+}
+#playerselect button {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: #4c4d46;
+    padding: 1rem;
+    display: inline-block;
+    width: 100px;
+}
+#pl1bets {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #4c4d46;
+    padding: 1rem;
+    font-size: 1.8rem;
+    width: 75%;
+    text-align: center;
+    min-width: 320px;
+}
+#pl2bets {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #4c4d46;
+    padding: 1rem;
+    font-size: 1.8rem;
+    width: 75%;
+    text-align: center;
+    min-width: 320px;
+}
+#pl3bets {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #4c4d46;
+    padding: 1rem;
+    font-size: 1.8rem;
+    width: 75%;
+    text-align: center;
+    min-width: 320px;
+}
+#pl1bet1,
+#pl1bet2,
+#pl1bet3,
+#pl1bet4,
+#pl1bet5,
+#pl2bet1,
+#pl2bet2,
+#pl2bet3,
+#pl2bet4,
+#pl2bet5,
+#pl3bet1,
+#pl3bet2,
+#pl3bet3,
+#pl3bet4,
+#pl3bet5 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: #4c4d46;
+    padding: 1rem;
+    display: inline-block;
+    width: 100px;
+    margin: 0.25rem;
+}
+.deal,
+.next,
+.new,
+.quit {
+    display: inline-block;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: #4c4d46;
+    padding: 1rem;
+    width: auto;
+    margin: 0.5rem;
+}
+.hit,
+.stand {
+    display: inline-block;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.5rem;
+    color: #4c4d46;
+    padding: 0.5rem;
+    width: auto;
+    margin: 0.5rem;
+}
+#table {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #4c4d46;
+    width: 85%;
+    height: 80%;
+    font-size: 1.8rem;
+    text-align: center;
+    min-width: 320px;
+    overflow: scroll;
+}
+.dealer {
+    padding-bottom: 1.6rem;
+}
+#players {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.player1 {
+    display: none;
+    width: auto;
+    color: #4c4d46;
+    text-align: center;
+    min-width: 320px;
+    border: 1px dashed #4c4d46;
+}
+.player2 {
+    display: none;
+    width: auto;
+    color: #4c4d46;
+    text-align: center;
+    min-width: 320px;
+    border: 1px dashed #4c4d46;
+}
+.player3 {
+    display: none;
+    width: auto;
+    color: #4c4d46;
+    text-align: center;
+    min-width: 320px;
+    border: 1px dashed #4c4d46;
+}
+.card {
+    padding: 0.25rem;
+    display: inline-block;
+    width: 100px;
+    margin: 0.25rem;
+}
+#pl1hitbustblackjack,
+#pl2hitbustblackjack,
+#pl3hitbustblackjack,
+#dealerhitbustblackjack {
+    position: absolute;
+    z-index: 1;
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    color: #54b5e2;
+    text-align: center;
+    display: none;
+}
+.winners {
+    display: none;
+    border: 8px solid #4c4d46;
+    color: #4c4d46;
+    position: absolute;
+    background-color: #e8e7e2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.25rem;
+    padding: 0.25rem;
+    width: 85%;
+    height: 80%;
+    overflow: scroll;
+    z-index: 998;
+    text-align: center;
+}
+#results {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.pl1bank,
+.pl2bank,
+.pl3bank {
+    display: none;
+    width: auto;
+    color: #4c4d46;
+    text-align: center;
+}
+.pl1bank h2,
+.pl2bank h2,
+.pl3bank h2 {
+    margin: 1.5rem;
+}
+#pl1bank,
+#pl2bank,
+#pl3bank {
+    font-family: 'Great Vibes', cursive;
+    font-size: 9rem;
+    padding: 0rem;
+    margin: 0.5rem;
+    color: #54b5e2;
+}
+h4 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+/*This sections responsive adaptive design*/
+
+
+/*Small displays*/
+
+@media all and (max-width:400px) {
+    html {
+        border: 9px solid #4c4d46;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    #start {
+        font-size: 2rem;
+    }
+    .rules {
+        width: 80%;
+        font-size: 1rem;
+    }
+    #playerselect {
+        font-size: 1rem;
+    }
+    #playerselect button,
+    #pl1bet1,
+    #pl1bet2,
+    #pl1bet3,
+    #pl1bet4,
+    #pl1bet5,
+    #pl2bet1,
+    #pl2bet2,
+    #pl2bet3,
+    #pl2bet4,
+    #pl2bet5,
+    #pl3bet1,
+    #pl3bet2,
+    #pl3bet3,
+    #pl3bet4,
+    #pl3bet5 {
+        width: 77px;
+        font-size: 2.5rem;
+        padding: 0.8rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    .card {
+        padding: 0.25rem;
+        display: inline-block;
+        width: 77px;
+        margin: 0.25rem;
+    }
+    .deal,
+    .next,
+    .new,
+    .quit {
+        display: inline-block;
+        font-family: 'Great Vibes', cursive;
+        font-size: 1.2rem;
+        color: #4c4d46;
+        padding: 1rem;
+        width: auto;
+        margin: 0.5rem;
+    }
+    .hit,
+    .stand {
+        display: inline-block;
+        font-family: 'Great Vibes', cursive;
+        font-size: 1rem;
+        color: #4c4d46;
+        padding: 0.5rem;
+        width: auto;
+        margin: 0.5rem;
+    }
+}
+
+/*medium displays*/
+
+@media all and (min-width:401px) and (max-width:700px) {
+    html {
+        border: 12px solid #4c4d46;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    #start {
+        font-size: 2rem;
+    }
+    .rules {
+        font-size: 1rem;
+    }
+    #playerselect {
+        font-size: 1.4rem;
+    }
+    #playerselect button,
+    #pl1bet1,
+    #pl1bet2,
+    #pl1bet3,
+    #pl1bet4,
+    #pl1bet5,
+    #pl2bet1,
+    #pl2bet2,
+    #pl2bet3,
+    #pl2bet4,
+    #pl2bet5,
+    #pl3bet1,
+    #pl3bet2,
+    #pl3bet3,
+    #pl3bet4,
+    #pl3bet5 {
+        width: 90px;
+        font-size: 3rem;
+        padding: 0.9rem;
+    }
+    h2 {
+        font-size: 1.7rem;
+    }
+    .card {
+        padding: 0.25rem;
+        display: inline-block;
+        width: 90px;
+        margin: 0.25rem;
+    }
+    .deal,
+    .next,
+    .new,
+    .quit {
+        display: inline-block;
+        font-family: 'Great Vibes', cursive;
+        font-size: 1.6rem;
+        color: #4c4d46;
+        padding: 1rem;
+        width: auto;
+        margin: 0.5rem;
+    }
+    .hit,
+    .stand {
+        display: inline-block;
+        font-family: 'Great Vibes', cursive;
+        font-size: 1.3rem;
+        color: #4c4d46;
+        padding: 0.5rem;
+        width: auto;
+        margin: 0.5rem;
+    }
+}

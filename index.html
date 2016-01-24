@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <title>Blackjack by DMcT</title>
+
+    <!-- stylesheets-->
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- javascript-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/javascript.js"></script>
+</head>
+
+<body>
+
+    <h1>BlackJack</h1>
+
+    <!--   Rules button will be on screen at all times-->
+    <button id="rules">Rules</button>
+
+    <!--   Start button - will go once clicked-->
+    <div>
+        <button id="start">Click to Start the Game</button>
+    </div>
+
+    <!--    Start Rules Div - this will be an overlay than can be made visible using the Rules button-->
+    <div class="rules">
+        <button id="close_rules">Close</button>
+        <h2>Rules</h2>
+        <p>Blackjack, also known as 21, is a comparing card game between a player and dealer, meaning players compete against the dealer but not against other players. It is played with one or more decks of 52 cards. The object of the game is to beat the dealer in one of the following ways:</p>
+
+        <ul>
+            <li>Get 21 points on the player's first two cards (called a blackjack), without a dealer blackjack;</li>
+            <li>Reach a final score higher than the dealer without exceeding 21; or</li>
+            <li>Let the dealer draw additional cards until his or her hand exceeds 21.</li>
+        </ul>
+
+        <p>The player or players are dealt a two-card hand and add together the value of their cards. Face cards (kings, queens, and jacks) are counted as ten points. A player and the dealer can count an ace as 1 point or 11 points. All other cards are counted as the numeric value shown on the card. After receiving their first two cards, players have the option of getting a "hit", or taking an additional card. In a given round, the player or the dealer wins by having a score of 21 or by having the higher score that is less than 21. Scoring higher than 21 (called "busting" or "going bust") results in a loss. A player may win by having any final score equal to or less than 21 if the dealer busts.</p>
+
+        <p>The dealer must hit until the cards total 17 or more points. Players win by not busting and having a total higher than the dealer's. The dealer loses by busting or having a lesser hand than the player who has not busted. If the player and dealer have the same total, this is called a "push", and the player does not win or lose money on that hand.</p>
+    </div>
+    <!--    End of Rules Div-->
+
+    <!--   start of player select div-->
+    <div id="playerselect">
+        <h2>Select Number of Players</h2>
+        <button id="1pls">1</button>
+        <button id="2pls">2</button>
+        <button id="3pls">3</button>
+    </div>
+    <!--    end of player select div-->
+
+    <!--   start of betting div-->
+    <div id="pl1bets">
+        <h2 id="pl1bet_h2"></h2>
+        <button id="pl1bet1">2</button>
+        <button id="pl1bet2">4</button>
+        <button id="pl1bet3">6</button>
+        <button id="pl1bet4">8</button>
+        <button id="pl1bet5">10</button>
+        <div>
+            <button class="deal"> - Deal - </button>
+            <button class="next"> - Next Player - </button>
+        </div>
+    </div>
+    <div id="pl2bets">
+        <h2 id="pl2bet_h2"></h2>
+        <button id="pl2bet1">2</button>
+        <button id="pl2bet2">4</button>
+        <button id="pl2bet3">6</button>
+        <button id="pl2bet4">8</button>
+        <button id="pl2bet5">10</button>
+        <div>
+            <button class="deal"> - Deal - </button>
+            <button class="next"> - Next Player - </button>
+        </div>
+    </div>
+    <div id="pl3bets">
+        <h2 id="pl3bet_h2"></h2>
+        <button id="pl3bet1">2</button>
+        <button id="pl3bet2">4</button>
+        <button id="pl3bet3">6</button>
+        <button id="pl3bet4">8</button>
+        <button id="pl3bet5">10</button>
+        <div>
+            <button class="deal"> - Deal - </button>
+        </div>
+    </div>
+    <!--    end of betting div-->
+
+    <!--   Start of table section - Dealer + Players -->
+    <div id="table">
+        <div class="dealer">
+            <h2>Dealer</h2>
+            <div id="dealercards" class="cards">
+                <h3 id="dealerhitbustblackjack"></h3>
+            </div>
+        </div>
+        <div id="players">
+            <div class="player1">
+                <h2>Player 1</h2>
+                <div id="pl1cards" class="cards">
+                    <h3 id="pl1hitbustblackjack"></h3>
+                </div>
+                <div>
+                    <!--   Hit button-->
+                    <button id="Player1_Hit" class="hit"> - Hit - </button>
+                    <!--    Stand button-->
+                    <button id="Player1_Stand" class="stand"> - Stand - </button>
+                </div>
+            </div>
+            <div class="player2">
+                <h2>Player 2</h2>
+                <div id="pl2cards" class="cards">
+                    <h3 id="pl2hitbustblackjack"></h3>
+                </div>
+                <div>
+                    <!--   Hit button-->
+                    <button id="Player2_Hit" class="hit"> - Hit - </button>
+                    <!--    Stand button-->
+                    <button id="Player2_Stand" class="stand"> - Stand - </button>
+                </div>
+            </div>
+            <div class="player3">
+                <h2>Player 3</h2>
+                <div id="pl3cards" class="cards">
+                    <h3 id="pl3hitbustblackjack"></h3>
+                </div>
+                <div>
+                    <!--   Hit button-->
+                    <button id="Player3_Hit" class="hit"> - Hit - </button>
+                    <!--    Stand button-->
+                    <button id="Player3_Stand" class="stand"> - Stand - </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="winners">
+        <h4>Bank!</h4>
+        <div id="results">
+            <div class="pl1bank">
+                <h2>Player 1</h2>
+                <h5 id="pl1bank"></h5>
+                <h2>in the bank!</h2>
+            </div>
+            <div class="pl2bank">
+                <h2>Player 2</h2>
+                <h5 id="pl2bank"></h5>
+                <h2>in the bank!</h2>
+            </div>
+            <div class="pl3bank">
+                <h2>Player 3</h2>
+                <h5 id="pl3bank"></h5>
+                <h2>in the bank!</h2>
+            </div>
+        </div>
+        <div>
+            <button id="next_hand" class="new"> - Next Hand - </button>
+            <button id="quit" class="quit"> - Quit - </button>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
